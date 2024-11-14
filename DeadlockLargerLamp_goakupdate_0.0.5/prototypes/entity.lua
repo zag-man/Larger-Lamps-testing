@@ -3,10 +3,18 @@ local DLLFUNC = require("prototypes.functions")
 
 -- electric large lamp
 
-local circuits = circuit_connector_definitions.create_vector(
-    universal_connector_template,
-    {{ variation = 26, main_offset = util.by_pixel(0, 10), shadow_offset = util.by_pixel(0, 10), show_shadow = true }}
-)
+local circuits = {
+    points = {
+        shadow = {
+            red = { 0.47, -0.48 },
+            green = { 0.47, -0.48 },
+        },
+        wire = {
+            red = { 0.47, -0.48 },
+            green = { 0.47, -0.48 },
+        }
+    }
+}
 
 local signal_colours = data.raw.lamp["small-lamp"].signal_to_color_mapping
 if not signal_colours then
