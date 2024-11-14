@@ -3,18 +3,10 @@ local DLLFUNC = require("prototypes.functions")
 
 -- electric large lamp
 
-local circuits = {
-    points = {
-        shadow = {
-            red = { 0.47, -0.48 },
-            green = { 0.47, -0.48 },
-        },
-        wire = {
-            red = { 0.47, -0.48 },
-            green = { 0.47, -0.48 },
-        }
-    }
-}
+local circuits = circuit_connector_definitions.create_vector(
+    universal_connector_template,
+    {{ variation = 26, main_offset = util.by_pixel(0, 10), shadow_offset = util.by_pixel(0, 10), show_shadow = true }}
+)
 
 local signal_colours = data.raw.lamp["small-lamp"].signal_to_color_mapping
 if not signal_colours then
@@ -31,7 +23,18 @@ end
 local lamp = {
     name = DLL.name,  -- deadlock-large-lamp
     type = "lamp",
-    circuit_connector = circuits,
+    circuit_connector = {
+        points = {
+            shadow = {
+                red = { 0.47, -0.48 },
+                green = { 0.47, -0.48 },
+            },
+            wire = {
+                red = { 0.47, -0.48 },
+                green = { 0.47, -0.48 },
+            }
+        }
+    },
     circuit_wire_max_distance = 9,
     collision_box = { {-0.6,-0.6}, {0.6,0.6} },
     selection_box = { {-1.0,-1.0}, {1.0,1.0} },
