@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 14. 11. 2024
+    -Large Lamp circuit connection is properly positioned
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 14. 11. 2024
-
-  Bugfixes:
-    - Moved position of circuit_connection to be properly alligned in top-right corner of sprite.
+    -Electric Copper lamp are now able to picked up.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 14. 11. 2024
