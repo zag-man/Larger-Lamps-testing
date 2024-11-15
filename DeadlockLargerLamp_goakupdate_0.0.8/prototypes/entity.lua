@@ -40,7 +40,7 @@ local lamp = {
     selection_box = { {-1.0,-1.0}, {1.0,1.0} },
     tile_width = 2,
     tile_height = 2,
-    collision_mask = {layers = {object = true, water_tile = true, meltable = true}},
+    collision_mask = {layers = {object = true, water_tile = true, meltable = true,player=true}},
     corpse = "small-remnants",
     darkness_for_all_lamps_off = 0.3,
     darkness_for_all_lamps_on = 0.5,
@@ -145,7 +145,7 @@ local lamp = {
     icon_mipmaps = 4,
     fast_replaceable_group = "large-lamp",
     next_upgrade = DLL.name,  -- deadlock-large-lamp
-    collision_mask = {layers = {object = true, water_tile = true, meltable = true}},
+    collision_mask = {layers = {object = true, water_tile = true, meltable = true,player=true}},
     crafting_speed = 1,
     crafting_categories = {"lamp-burning"},
     fixed_recipe = DLL.copper_name.."-burning",
@@ -299,7 +299,7 @@ local lamp = {
     selection_box = { {-1.0, -1.0}, {1.0, 1.0} },
     tile_width = 2,
     tile_height = 2,
-    collision_mask = {layers = {object = true, water_tile = true, meltable = true}},
+    collision_mask = {layers = {object = true, water_tile = true, meltable = true,player=true}},
     corpse = "small-remnants",
     dying_explosion = "medium-explosion",
     energy_source = {

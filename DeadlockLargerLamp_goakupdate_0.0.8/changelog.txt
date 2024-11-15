@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 15. 11. 2024
+    -Large Lamp and Copper Lamp player collision is fixed(fix by NullHarp).
+    - Fixed missing receipe en key for deadlock-copper-lamp-burning(fix by NullHarp).
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 14. 11. 2024
     -Large Lamp circuit connection is properly positioned(fix by NullHarp).
