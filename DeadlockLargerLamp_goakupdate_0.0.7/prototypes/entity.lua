@@ -23,7 +23,18 @@ end
 local lamp = {
     name = DLL.name,  -- deadlock-large-lamp
     type = "lamp",
-    circuit_connector = circuits,
+    circuit_connector = {
+        points = {
+            shadow = {
+                red = { 0.47, -0.48 },
+                green = { 0.47, -0.48 },
+            },
+            wire = {
+                red = { 0.47, -0.48 },
+                green = { 0.47, -0.48 },
+            }
+        }
+    },
     circuit_wire_max_distance = 9,
     collision_box = { {-0.6,-0.6}, {0.6,0.6} },
     selection_box = { {-1.0,-1.0}, {1.0,1.0} },
@@ -61,7 +72,7 @@ local lamp = {
     },
     max_health = 150,
     minable = {
-        mining_time = 0.2,
+        mining_time = 2.0,
         result = DLL.name,  -- deadlock-large-lamp
     },
     mined_sound = {
@@ -126,7 +137,7 @@ local lamp = {
     name = DLL.copper_name,  -- deadlock-copper-lamp
     type = "assembling-machine",
     minable = {
-        mining_time = 0.2,
+        mining_time = 2.0,
         result = DLL.copper_name,  -- deadlock-copper-lamp
     },
     icon = string.format("%s/copper-lamp.png", DLL.icon_path),
@@ -222,7 +233,10 @@ data:extend({lamp})
 lamp = table.deepcopy(data.raw.lamp[DLL.name])
 
 lamp.name = DLL.floor_name  -- deadlock-floor-lamp
-lamp.minable.result = DLL.floor_name  -- deadlock-floor-lamp
+lamp.minable = {
+    mining_time = 2.0,
+    result = DLL.floor_name  -- deadlock-floor-lamp
+}
 lamp.icon = string.format("%s/floor-lamp.png", DLL.icon_path)
 lamp.light.intensity = 0.4
 lamp.energy_usage_per_tick = "10kW"
@@ -272,13 +286,17 @@ local DLLFUNC = require("prototypes.functions")
 local lamp = {
     name = DLL.electric_copper_name,  -- Use the correct unique name for the electric copper lamp
     type = "lamp",  -- Type is lamp to behave like a regular lamp
+    minable = {
+        mining_time = 2.0,
+        result = DLL.electric_copper_name  -- Adjust this to the appropriate item name
+    },
     circuit_connector = circuit_connector_definitions.create_vector(
         universal_connector_template,
         {{ variation = 26, main_offset = util.by_pixel(0, 10), shadow_offset = util.by_pixel(0, 10), show_shadow = true }}
     ),
     circuit_wire_max_distance = 9,
-    collision_box = { {-0.6,-0.6}, {0.6,0.6} },
-    selection_box = { {-1.0,-1.0}, {1.0,1.0} },
+    collision_box = { {-0.6, -0.6}, {0.6, 0.6} },
+    selection_box = { {-1.0, -1.0}, {1.0, 1.0} },
     tile_width = 2,
     tile_height = 2,
     collision_mask = {layers = {object = true, water_tile = true, meltable = true}},
@@ -289,7 +307,7 @@ local lamp = {
         usage_priority = "lamp",
     },
     energy_usage_per_tick = "20kW",  -- Set power usage for electric lamp
-    flags = {"placeable-neutral","player-creation"},
+    flags = {"placeable-neutral", "player-creation"},
     glow_color_intensity = 1,
     glow_size = 12,
     glow_render_mode = "multiplicative",
