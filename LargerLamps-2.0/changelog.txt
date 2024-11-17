@@ -2,6 +2,7 @@
 Version: 0.0.9
 Date: 18. 11. 2024
     - Mostly Rewrote control.lua due to old 1.1 Factorio code in there in the config refresh(bug report by m444v.
+    - Renamed File structure of mod so thats its clearer what mod it is , Deadlocklargerlamp_goaupdate renamed to Larger-lamps 2.0.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 15. 11. 2024
