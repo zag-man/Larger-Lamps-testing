@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 18. 11. 2024
+    - Mostly Rewrote control.lua due to old 1.1 Factorio code in there in the config refresh(bug report by m444v.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 15. 11. 2024
     -Large Lamp and Copper Lamp player collision is fixed(fix by NullHarp).
