@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 28-11-2024
+  Changes:
+    - Updated recipe categories for compatibility with AAI Industrial mod.
+    - Added fallback for recipe categories to ensure compatibility with vanilla Factorio when AAI is not present.
+    - Changed the Copper Electric Lamp icon (thanks to ChocoMaxXx).
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 19-11-2024
   Changes:

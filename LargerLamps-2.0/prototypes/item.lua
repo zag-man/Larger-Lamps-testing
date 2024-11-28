@@ -29,7 +29,7 @@ data:extend({
     {
         type = "item",
         name = DLL.electric_copper_name,  
-        icon = string.format("%s/copper-lamp.png", DLL.icon_path),
+        icon = string.format("%s/copper-lampelect.png", DLL.icon_path),
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "circuit-network",  -- Electric copper lamp under circuit-network
