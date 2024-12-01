@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 01-12-2024
+  Bugfixes:
+    - Fixed a crash when using Larger Lamps with the Maraxsis mod (beta).
+  Changes:
+    - Adjusted `next_upgrade` settings for better compatibility with other mods.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 28-11-2024
   Changes:
