@@ -144,7 +144,7 @@ local lamp = {
     icon_size = 64,
     icon_mipmaps = 4,
     fast_replaceable_group = "large-lamp",
-    next_upgrade = DLL.name,  -- deadlock-large-lamp
+    next_upgrade = DLL.copper_name,  -- deadlock-large-lamp
     collision_mask = {layers = {object = true, water_tile = true, meltable = true,player=true}},
     crafting_speed = 1,
     crafting_categories = {"lamp-burning"},
